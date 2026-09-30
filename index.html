@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phum Frames | ช่างภาพงานแต่งเชียงใหม่</title>
+<meta name="description" content="ช่างภาพงานแต่งสไตล์ธรรมชาติในเชียงใหม่ สำหรับคู่รักที่อยากได้ภาพจริงใจ ไม่ปั้นแต่ง ส่งงานครบใน 14 วัน">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Sarabun:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#F5EFE6; --brown:#A67C52; --sage:#8A9A7B; --ink:#2B2B2B;
+  --brown-dark:#7d5a38; --line:rgba(43,43,43,.15);
+  --bg:var(--cream); --text:var(--ink); --card:#fbf8f2;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){--bg:#22201d;--text:#F5EFE6;--card:#2c2a26;--line:rgba(245,239,230,.2);--brown-dark:#c9a37a}
+}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:'Sarabun',system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.75;font-size:1.05rem}
+h1,h2,h3{font-family:'Playfair Display','Sarabun',serif;line-height:1.25;font-weight:500}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--brown);outline-offset:3px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 1.25rem}
+section{padding:5rem 0}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);margin-bottom:1.5rem}
+
+/* nav */
+nav{position:sticky;top:0;z-index:5;background:var(--bg);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+.brand{display:flex;align-items:center;gap:.6rem;text-decoration:none;font-family:'Playfair Display',serif;font-weight:700;font-size:1.15rem}
+.mark{width:30px;height:30px;position:relative;display:grid;place-items:center;font-family:'Playfair Display',serif;font-weight:700;font-size:1rem}
+.mark::before,.mark::after{content:"";position:absolute;inset:0;border:2px solid var(--brown);
+  -webkit-mask:linear-gradient(#000 0 0) top left/9px 9px no-repeat,linear-gradient(#000 0 0) top right/9px 9px no-repeat,linear-gradient(#000 0 0) bottom left/9px 9px no-repeat,linear-gradient(#000 0 0) bottom right/9px 9px no-repeat;
+  mask:linear-gradient(#000 0 0) top left/9px 9px no-repeat,linear-gradient(#000 0 0) top right/9px 9px no-repeat,linear-gradient(#000 0 0) bottom left/9px 9px no-repeat,linear-gradient(#000 0 0) bottom right/9px 9px no-repeat}
+.links{display:flex;gap:1.3rem;font-size:.95rem}
+.links a{text-decoration:none}
+.links a:hover{color:var(--brown-dark)}
+.btn{display:inline-block;background:var(--brown);color:#fff;text-decoration:none;padding:.75rem 1.6rem;border-radius:4px;font-weight:700;border:0;cursor:pointer;font:inherit;font-weight:700}
+.btn:hover{background:var(--brown-dark)}
+@media(max-width:640px){.links a:not(.btn){display:none}}
+
+/* hero: a viewfinder frame around the promise */
+.hero{padding:3rem 0 5rem}
+.finder{position:relative;min-height:min(72vh,560px);display:flex;flex-direction:column;justify-content:center;padding:clamp(2rem,6vw,4.5rem);
+  background:linear-gradient(160deg,#c9b79a 0%,var(--sage) 55%,#5f6f52 100%);color:#fff}
+.finder::before,.finder::after{content:"";position:absolute;inset:14px;pointer-events:none;
+  border:2px solid rgba(255,255,255,.9);
+  -webkit-mask:linear-gradient(#000 0 0) top left/34px 34px no-repeat,linear-gradient(#000 0 0) top right/34px 34px no-repeat,linear-gradient(#000 0 0) bottom left/34px 34px no-repeat,linear-gradient(#000 0 0) bottom right/34px 34px no-repeat;
+  mask:linear-gradient(#000 0 0) top left/34px 34px no-repeat,linear-gradient(#000 0 0) top right/34px 34px no-repeat,linear-gradient(#000 0 0) bottom left/34px 34px no-repeat,linear-gradient(#000 0 0) bottom right/34px 34px no-repeat}
+.finder .rec{position:absolute;top:30px;right:34px;font-size:.85rem;display:flex;align-items:center;gap:.4rem}
+.finder .rec i{width:9px;height:9px;border-radius:50%;background:#e8604c;animation:blink 1.6s steps(2) infinite}
+@keyframes blink{50%{opacity:0}}
+@media(prefers-reduced-motion:reduce){.finder .rec i{animation:none}html{scroll-behavior:auto}}
+.finder h1{font-size:clamp(2.2rem,7vw,4.4rem);max-width:14ch;font-weight:700}
+.finder p{max-width:34ch;margin:1rem 0 1.8rem;font-size:1.15rem}
+.finder .btn{align-self:flex-start;background:var(--cream);color:var(--ink)}
+.finder .btn:hover{background:#fff}
+.hero small{display:block;margin-top:.8rem;color:inherit;opacity:.7;font-size:.9rem}
+
+/* about */
+.about{display:grid;grid-template-columns:280px 1fr;gap:3rem;align-items:center}
+.portrait{aspect-ratio:4/5;background:linear-gradient(180deg,var(--brown),#d9c3a5);display:grid;place-items:center;color:#fff;font-size:.9rem;text-align:center;padding:1rem}
+.about p+p{margin-top:1rem}
+.about p{max-width:60ch}
+@media(max-width:720px){.about{grid-template-columns:1fr;gap:1.5rem}.portrait{max-width:240px}}
+
+/* portfolio */
+.grid{columns:3 220px;column-gap:.9rem}
+.tile{display:block;width:100%;margin:0 0 .9rem;border:0;padding:0;cursor:zoom-in;position:relative;break-inside:avoid;overflow:hidden;color:#fff;font:inherit}
+.tile span{position:absolute;left:0;right:0;bottom:0;padding:.6rem .8rem;font-size:.9rem;background:linear-gradient(transparent,rgba(0,0,0,.55));text-align:left}
+.tile:hover{filter:brightness(1.06)}
+dialog{border:0;padding:0;background:transparent;max-width:min(92vw,900px);width:100%}
+dialog::backdrop{background:rgba(20,18,15,.88)}
+.lb{aspect-ratio:3/2;display:grid;place-items:end start;color:#fff;padding:1.2rem;position:relative}
+.lb.tall{aspect-ratio:4/5;max-height:86vh;margin:0 auto}
+.close{position:absolute;top:.6rem;right:.6rem;background:var(--cream);color:var(--ink);border:0;border-radius:50%;width:40px;height:40px;font-size:1.3rem;cursor:pointer}
+.note{margin-top:1.2rem;font-size:.9rem;opacity:.7}
+
+/* packages */
+.pk{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.card{background:var(--card);border:1px solid var(--line);padding:1.8rem;display:flex;flex-direction:column}
+.card.pick{border:2px solid var(--brown)}
+.card h3{font-size:1.4rem}
+.price{font-family:'Playfair Display',serif;font-size:2rem;color:var(--brown-dark);margin:.4rem 0 1rem}
+.card ul{padding-left:1.1rem;margin-bottom:1.5rem;flex:1}
+.card li{margin-bottom:.35rem}
+.card .btn{text-align:center}
+@media(max-width:820px){.pk{grid-template-columns:1fr}}
+
+/* reviews */
+.rv{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem}
+blockquote{border-left:3px solid var(--sage);padding-left:1.1rem}
+blockquote footer{margin-top:.6rem;font-size:.92rem;opacity:.75}
+@media(max-width:820px){.rv{grid-template-columns:1fr;gap:1.5rem}}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:start}
+.contact ul{list-style:none;padding:0}
+.contact li{padding:.7rem 0;border-bottom:1px solid var(--line)}
+.contact li b{display:inline-block;min-width:5rem}
+.map{aspect-ratio:4/3;width:100%;border:0;background:var(--sage)}
+@media(max-width:720px){.contact{grid-template-columns:1fr}}
+footer.site{padding:2rem 0;border-top:1px solid var(--line);font-size:.9rem;opacity:.8;text-align:center}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <a class="brand" href="#top"><span class="mark" aria-hidden="true">P</span>Phum Frames</a>
+    <div class="links">
+      <a href="#portfolio">ผลงาน</a>
+      <a href="#packages">แพ็กเกจ</a>
+      <a href="#contact">ติดต่อ</a>
+      <a class="btn" href="https://line.me/ti/p/~YOUR_LINE_ID">จองคิว</a>
+    </div>
+  </div>
+</nav>
+
+<main id="top">
+<header class="hero">
+  <div class="wrap">
+    <div class="finder">
+      <div class="rec" aria-hidden="true"><i></i>REC</div>
+      <h1>ทุกภาพเล่าเรื่องของคุณสองคน</h1>
+      <p>ช่างภาพงานแต่งสไตล์ธรรมชาติในเชียงใหม่ ภาพจริงใจ ไม่ปั้นแต่ง ส่งงานครบภายใน 14 วัน</p>
+      <a class="btn" href="https://line.me/ti/p/~YOUR_LINE_ID">จองคิวผ่าน LINE</a>
+    </div>
+    <small>ภาพพื้นหลังเป็นตัวอย่าง ให้แทนด้วยภาพจริงจากงานที่ถ่าย</small>
+  </div>
+</header>
+
+<section id="about" style="padding-top:2rem">
+  <div class="wrap about">
+    <div class="portrait" role="img" aria-label="ที่สำหรับรูปโปรไฟล์ของภูมิ">ใส่รูปโปรไฟล์ของคุณภูมิ</div>
+    <div>
+      <h2>สวัสดีครับ ผมภูมิ</h2>
+      <p>ผมเป็นช่างภาพอิสระในเชียงใหม่ ถ่ายงานแต่งขนาดเล็กถึงกลางและพอร์ตเทรตคู่รัก ผมชอบแสงธรรมชาติและช่วงเวลาที่คุณไม่ทันรู้ตัวว่ากำลังถูกถ่าย</p>
+      <p>ผมจะไม่จัดท่าแข็งๆ ให้คุณ แต่จะคุยเล่น ขำด้วยกัน แล้วรอให้รอยยิ้มจริงๆ มาเอง ภาพที่ได้จึงเป็นเรื่องของคุณสองคนจริงๆ</p>
+    </div>
+  </div>
+</section>
+
+<section id="portfolio">
+  <div class="wrap">
+    <h2>ผลงาน</h2>
+    <div class="grid" id="grid"></div>
+    <p class="note">กดที่ภาพเพื่อดูขยาย ตอนนี้เป็นภาพตัวอย่าง ให้เปลี่ยนเป็นไฟล์ภาพจริงในโฟลเดอร์ images/</p>
+  </div>
+</section>
+
+<section id="packages" style="background:var(--card)">
+  <div class="wrap">
+    <h2>แพ็กเกจ</h2>
+    <div class="pk">
+      <div class="card">
+        <h3>พอร์เทรตคู่รัก</h3>
+        <div class="price">5,900 บาท</div>
+        <ul><li>ถ่าย 2 ชั่วโมง 1 โลเคชัน</li><li>ภาพแต่งสี 40 ภาพ</li><li>ส่งผ่าน Google Drive</li></ul>
+        <a class="btn" href="https://line.me/ti/p/~YOUR_LINE_ID">จองคิว</a>
+      </div>
+      <div class="card pick">
+        <h3>งานแต่งครึ่งวัน</h3>
+        <div class="price">14,900 บาท</div>
+        <ul><li>ถ่าย 5 ชั่วโมง พิธีและงานเลี้ยง</li><li>ภาพแต่งสี 150 ภาพ</li><li>ไฮไลต์ 20 ภาพส่งใน 3 วัน</li></ul>
+        <a class="btn" href="https://line.me/ti/p/~YOUR_LINE_ID">จองคิว</a>
+      </div>
+      <div class="card">
+        <h3>งานแต่งเต็มวัน</h3>
+        <div class="price">24,900 บาท</div>
+        <ul><li>ถ่าย 10 ชั่วโมง ตั้งแต่เตรียมตัวถึงจบงาน</li><li>ภาพแต่งสี 300 ภาพ</li><li>ภาพพรีเวดดิ้ง 1 โลเคชันรวมในแพ็กเกจ</li></ul>
+        <a class="btn" href="https://line.me/ti/p/~YOUR_LINE_ID">จองคิว</a>
+      </div>
+    </div>
+    <p class="note">ทุกแพ็กเกจส่งภาพครบภายใน 14 วัน ลูกค้าเก่าที่แนะนำเพื่อนได้รับส่วนลด ราคาในหน้านี้เป็นตัวอย่าง</p>
+  </div>
+</section>
+
+<section id="reviews">
+  <div class="wrap">
+    <h2>เสียงจากคู่รักที่เคยถ่ายกับผม</h2>
+    <div class="rv">
+      <blockquote><p>ไม่ต้องโพสต์ท่าเลย แค่คุยกันไปเรื่อยๆ ภาพออกมาเป็นธรรมชาติมาก</p><footer>คุณเมย์และคุณเจ ถ่ายงานแต่ง ธ.ค. 2025</footer></blockquote>
+      <blockquote><p>ได้ภาพครบตามกำหนด 14 วัน และภาพทุกใบมีเรื่องราวจริงๆ</p><footer>คุณแนนและคุณต้น ถ่ายพอร์เทรต</footer></blockquote>
+      <blockquote><p>ช่างภาพใจเย็นมาก ตลกด้วย ญาติๆ ยังถามหาเบอร์</p><footer>คุณฟ้าและคุณโอม ถ่ายงานแต่งครึ่งวัน</footer></blockquote>
+    </div>
+    <p class="note">รีวิวด้านบนเป็นตัวอย่าง ให้แทนด้วยรีวิวจริงจากลูกค้า</p>
+  </div>
+</section>
+
+<section id="contact" style="background:var(--card)">
+  <div class="wrap contact">
+    <div>
+      <h2>จองคิวหรือสอบถาม</h2>
+      <ul>
+        <li><b>LINE</b><a href="https://line.me/ti/p/~YOUR_LINE_ID">@phumframes</a></li>
+        <li><b>Instagram</b><a href="https://instagram.com/YOUR_IG">@phumframes</a></li>
+        <li><b>โทร</b><a href="tel:+660000000000">08x-xxx-xxxx</a></li>
+        <li><b>พื้นที่</b>เชียงใหม่ และจังหวัดใกล้เคียง</li>
+      </ul>
+    </div>
+    <iframe class="map" title="แผนที่เชียงใหม่" loading="lazy" src="https://www.google.com/maps?q=Chiang+Mai&output=embed"></iframe>
+  </div>
+</section>
+</main>
+
+<footer class="site">© 2026 Phum Frames · ช่างภาพงานแต่งเชียงใหม่</footer>
+
+<dialog id="dlg" aria-label="ดูภาพขยาย">
+  <div class="lb" id="lb"><button class="close" aria-label="ปิด" id="x">×</button><span id="cap"></span></div>
+</dialog>
+
+<script>
+// เปลี่ยน src เป็นไฟล์ภาพจริง เช่น images/wedding-01.jpg แล้วภาพจะแสดงแทนสีตัวอย่าง
+var photos=[
+ {c:"linear-gradient(160deg,#d9c3a5,#A67C52)",h:280,t:"พิธีรดน้ำสังข์"},
+ {c:"linear-gradient(160deg,#8A9A7B,#4f5e44)",h:200,t:"ทุ่งนาช่วงบ่าย"},
+ {c:"linear-gradient(160deg,#F5EFE6,#c9b79a)",h:320,t:"ก่อนพิธีเริ่ม"},
+ {c:"linear-gradient(160deg,#A67C52,#5b3f27)",h:220,t:"เสียงหัวเราะ"},
+ {c:"linear-gradient(160deg,#a9b79a,#8A9A7B)",h:300,t:"เดินเล่นดอยสุเทพ"},
+ {c:"linear-gradient(160deg,#c9b79a,#8a6a48)",h:210,t:"แสงเย็น"}
+];
+var g=document.getElementById('grid'),d=document.getElementById('dlg'),lb=document.getElementById('lb'),cap=document.getElementById('cap');
+photos.forEach(function(p){
+  var b=document.createElement('button');
+  b.className='tile';b.style.background=p.c;b.style.height=p.h+'px';
+  b.setAttribute('aria-label','ดูภาพ '+p.t);
+  b.innerHTML='<span>'+p.t+'</span>';
+  b.onclick=function(){lb.style.background=p.c;cap.textContent=p.t;lb.className='lb'+(p.h>260?' tall':'');d.showModal();};
+  g.appendChild(b);
+});
+document.getElementById('x').onclick=function(){d.close()};
+d.addEventListener('click',function(e){if(e.target===d)d.close()});
+</script>
+</body>
+</html>
